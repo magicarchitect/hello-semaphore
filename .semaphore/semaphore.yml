@@ -22,7 +22,7 @@ blocks:
             - echo 'running unit tests'
         - name: Integration tests
           commands:
-            - echo 'running integration tests'
+            - echo 'running integration tests (edited)'
 promotions:
   - name: Production deployment
     pipeline_file: pipeline_2.yml
