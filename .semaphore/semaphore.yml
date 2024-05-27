@@ -8,6 +8,18 @@ blocks:
   - name: 'Block #1'
     task:
       jobs:
-        - name: 'Job #1'
+        - name: Tests
           commands:
             - checkout
+  - name: Tests
+    task:
+      prologue:
+        commands:
+          - checkout
+      jobs:
+        - name: Unit tests
+          commands:
+            - echo 'running unit tests'
+        - name: Integration tests
+          commands:
+            - echo 'running integration tests'
